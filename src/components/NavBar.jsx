@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar ,MobileNav, Typography, Button, IconButton, Card } from "@material-tailwind/react";
 
-export default function NavBar () {
+export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -60,12 +60,10 @@ export default function NavBar () {
     <>
       <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="/"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            <Link to='/'>COWAY LONDON</Link>
+          <Typography>
+            <Link to='/'>
+              <img src="images/coway-logo.png" alt="coway" className='h-10 w-15' />
+            </Link>
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
@@ -107,20 +105,24 @@ export default function NavBar () {
               )}
             </IconButton>
           </div>
+          <div className='flex'>
+            <img src="images/coway-install.png" alt="coway" className='h-20 w-25' />
+            <div className='flex flex-col pl-3'>
+              <span className='font-bold'>Coway London</span>
+              <span className='text-sm'>+1 226-234-2776</span>
+              <span className='text-xs'>cowatlondon@gmail.com</span>
+              <span className='text-xs'>www.cowaylondon.com</span>
+            </div>
+          </div>
         </div>
         <MobileNav open={openNav}>
           {navList}
         </MobileNav>
       </Navbar>
+      {/* <div className="mx-auto max-w-screen-md py-12">
+        
+      </div> */}
     </>
-
-    // <nav>
-    //   <Link to='/'>HOME</Link>
-    //   <Link to='/about'>ABOUT</Link>
-    //   <Link to='/products'>PRODUCTS</Link>
-    //   <Link to='/gallery'>GALLERY</Link>
-    //   <Link to='/contact'>CONTACT</Link>
-    // </nav>
   );
 }
 

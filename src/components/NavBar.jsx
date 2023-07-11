@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar ,MobileNav, Typography, Button, IconButton, Card } from "@material-tailwind/react";
+import Home from './Home';
 
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -18,7 +19,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="font-normal hover:text-blue-600 hover:font-bold"
       >
         <Link to='/'>HOME</Link>
       </Typography>
@@ -26,7 +27,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="font-normal hover:text-blue-600 hover:font-bold"
       >
         <Link to='/about'>ABOUT</Link>
       </Typography>
@@ -34,7 +35,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="font-normal hover:text-blue-600 hover:font-bold"
       >
         <Link to='/products'>PRODUCTS</Link>
       </Typography>
@@ -42,7 +43,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="font-normal hover:text-blue-600 hover:font-bold"
       >
         <Link to='/gallery'>GALLERY</Link>
       </Typography>
@@ -50,7 +51,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="font-normal hover:text-blue-600 hover:font-bold"
       >
         <Link to='/contact'>CONTACT</Link>
       </Typography>
@@ -58,13 +59,22 @@ export default function NavBar() {
   );
   return (
     <>
-      <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 border-b-2 m-3">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography>
             <Link to='/'>
               <img src="images/coway-logo.png" alt="coway" className='h-10 w-15' />
             </Link>
           </Typography>
+          <div className='flex'>
+            <img src="images/coway-install.png" alt="coway" className='h-20 w-25' />
+            <div className='flex flex-col pl-3'>
+              <span className='font-bold'>Coway London</span>
+              <span className='text-sm'>+1 226-234-2776</span>
+              <span className='text-xs'>cowaylondon@gmail.com</span>
+              <span className='text-xs'>www.cowaylondon.com</span>
+            </div>
+          </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton
@@ -105,23 +115,14 @@ export default function NavBar() {
               )}
             </IconButton>
           </div>
-          <div className='flex'>
-            <img src="images/coway-install.png" alt="coway" className='h-20 w-25' />
-            <div className='flex flex-col pl-3'>
-              <span className='font-bold'>Coway London</span>
-              <span className='text-sm'>+1 226-234-2776</span>
-              <span className='text-xs'>cowatlondon@gmail.com</span>
-              <span className='text-xs'>www.cowaylondon.com</span>
-            </div>
-          </div>
         </div>
         <MobileNav open={openNav}>
           {navList}
         </MobileNav>
       </Navbar>
-      {/* <div className="mx-auto max-w-screen-md py-12">
-        
-      </div> */}
+      <div className="mx-auto max-w-screen-md py-12">
+        <Home />
+      </div>
     </>
   );
 }

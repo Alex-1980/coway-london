@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar ,MobileNav, Typography, Button, IconButton, Card } from "@material-tailwind/react";
-import Home from './Home';
 
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -120,9 +119,6 @@ export default function NavBar() {
           {navList}
         </MobileNav>
       </Navbar>
-      <div className="mx-auto max-w-screen-md py-12">
-        <Home />
-      </div>
     </>
   );
 }

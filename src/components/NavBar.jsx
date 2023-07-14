@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar ,MobileNav, Typography, Button, IconButton, Card } from "@material-tailwind/react";
+import { Navbar ,Collapse, Typography, IconButton} from "@material-tailwind/react";
 
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -18,7 +18,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal hover:text-blue-600 hover:font-bold"
+        className="font-normal text-black hover:text-blue-600 hover:font-bold"
       >
         <Link to='/'>HOME</Link>
       </Typography>
@@ -26,7 +26,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal hover:text-blue-600 hover:font-bold"
+        className="font-normal text-black hover:text-blue-600 hover:font-bold"
       >
         <Link to='/about'>ABOUT</Link>
       </Typography>
@@ -34,7 +34,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal hover:text-blue-600 hover:font-bold"
+        className="font-normal text-black hover:text-blue-600 hover:font-bold"
       >
         <Link to='/products'>PRODUCTS</Link>
       </Typography>
@@ -42,7 +42,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal hover:text-blue-600 hover:font-bold"
+        className="font-normal text-black hover:text-blue-600 hover:font-bold"
       >
         <Link to='/gallery'>GALLERY</Link>
       </Typography>
@@ -50,7 +50,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal hover:text-blue-600 hover:font-bold"
+        className="font-normal text-black hover:text-blue-600 hover:font-bold"
       >
         <Link to='/contact'>CONTACT</Link>
       </Typography>
@@ -58,7 +58,7 @@ export default function NavBar() {
   );
   return (
     <>
-      <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 border-b-2 m-3">
+      <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-16 lg:py-4 border-b-2">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography>
             <Link to='/'>
@@ -68,17 +68,17 @@ export default function NavBar() {
           <div className='flex'>
             <img src="images/coway-install.png" alt="coway" className='h-20 w-25' />
             <div className='flex flex-col pl-3'>
-              <span className='font-bold'>Coway London</span>
-              <span className='text-sm'>+1 226-234-2776</span>
-              <span className='text-xs'>cowaylondon@gmail.com</span>
-              <span className='text-xs'>www.cowaylondon.com</span>
+              <span className='text-black font-bold'>Coway London</span>
+              <span className='text-black text-sm'>+1 226-234-2776</span>
+              <span className='text-black text-xs'>cowaylondon@gmail.com</span>
+              <span className='text-black text-xs'>www.cowaylondon.com</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="ml-auto h-6 w-6 text-black hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -86,7 +86,7 @@ export default function NavBar() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  className="h-6 w-6"
+                  className="text-black h-6 w-6"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
@@ -115,11 +115,10 @@ export default function NavBar() {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </>
   );
 }
-

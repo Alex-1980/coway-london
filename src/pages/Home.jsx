@@ -3,7 +3,7 @@ import { Carousel } from 'flowbite-react';
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-3xl py-6">
+    <div className="mx-auto max-w-4xl py-6">
       <div className='grid grid-cols-2 gap-4'>
         <div className='grid grid-cols-2 gap-4'>
           <img src="/images/water-filtration.png" alt="water-filtration" />
@@ -25,51 +25,64 @@ export default function Home() {
                 src="/images/slide1.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide2"
                 src="/images/slide2.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide3"
                 src="/images/slide3.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide4"
                 src="/images/slide4.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide5"
                 src="/images/slide5.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide6"
                 src="/images/slide6.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide7"
                 src="/images/slide7.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide8"
                 src="/images/slide8.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide9"
                 src="/images/slide9.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide10"
                 src="/images/slide10.png"
               />
               <img
+                className='object-scale-down h-full w-full'
                 alt="slide11"
                 src="/images/slide11.png"
               />
             </Carousel>
           </div>
-          <div className='pl-10'>
-            <img src="/images/under-carousel.png" alt="" />
+          <div className='ml-7 w-full'>
+            <img className='w-full' src="/images/under-carousel.png" alt="coway" />
           </div>
         </div>
+      </div>
+      <div className='text-center pt-7 pb-3 border-b-2'>
+        <img src="/images/coway-info.png" alt="coway-info" />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Carousel } from 'flowbite-react';
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl py-6">
+    <div className="relative mx-auto max-w-4xl py-6">
       <div className='grid grid-cols-2 gap-4'>
         <div className='grid grid-cols-2 gap-4'>
           <img src="/images/water-filtration.png" alt="water-filtration" />
@@ -15,8 +15,8 @@ export default function Home() {
           <div className='pl-10'>
             <Carousel
               slideInterval={2000}
-              leftControl={<svg class="h-8 w-8 text-gray-200"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="8" y1="12" x2="16" y2="12" />  <line x1="8" y1="12" x2="12" y2="16" />  <line x1="8" y1="12" x2="12" y2="8" /></svg>}
-              rightControl={<svg class="h-8 w-8 text-gray-200"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="16" y1="12" x2="8" y2="12" />  <line x1="16" y1="12" x2="12" y2="16" />  <line x1="16" y1="12" x2="12" y2="8" /></svg>}
+              leftControl={<svg className="h-8 w-8 text-gray-200"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="8" y1="12" x2="16" y2="12" />  <line x1="8" y1="12" x2="12" y2="16" />  <line x1="8" y1="12" x2="12" y2="8" /></svg>}
+              rightControl={<svg className="h-8 w-8 text-gray-200"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="16" y1="12" x2="8" y2="12" />  <line x1="16" y1="12" x2="12" y2="16" />  <line x1="16" y1="12" x2="12" y2="8" /></svg>}
               className='h-96 border-8 rounded-md text-black'
             >
               <img
@@ -83,6 +83,9 @@ export default function Home() {
       </div>
       <div className='text-center pt-7 pb-3 border-b-2'>
         <img src="/images/coway-info.png" alt="coway-info" />
+      </div>
+      <div className='text-center pt-7'>
+        <img src="/images/brand-direction.png" alt="coway-info" />
       </div>
     </div>
   );

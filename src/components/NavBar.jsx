@@ -62,11 +62,11 @@ export default function NavBar() {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography>
             <Link to='/'>
-              <img src="images/coway-logo.png" alt="coway" className='h-10 w-15' />
+              <img src="images/home/coway-logo.png" alt="coway" className='h-10 w-15' />
             </Link>
           </Typography>
           <div className='flex'>
-            <img src="images/coway-install.png" alt="coway" className='h-20 w-25' />
+            <img src="images/home/coway-install.png" alt="coway" className='h-20 w-25' />
             <div className='flex flex-col pl-3'>
               <span className='text-black font-bold'>Coway London</span>
               <span className='text-black text-sm'>+1 226-234-2776</span>
@@ -75,7 +75,7 @@ export default function NavBar() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="hidden lg:block">{navList}</div>
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-black hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

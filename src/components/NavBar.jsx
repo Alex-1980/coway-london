@@ -18,7 +18,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal text-black hover:text-blue-600 hover:font-bold"
+        className="font-sans text-sky-600 font-bold hover:text-amber-500 hover:underline underline-offset-4"
       >
         <Link to='/'>HOME</Link>
       </Typography>
@@ -26,7 +26,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal text-black hover:text-blue-600 hover:font-bold"
+        className="font-normal text-sky-600 font-bold hover:text-amber-500 hover:underline underline-offset-4"
       >
         <Link to='/about'>ABOUT</Link>
       </Typography>
@@ -34,7 +34,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal text-black hover:text-blue-600 hover:font-bold"
+        className="font-normal text-sky-600 font-bold hover:text-amber-500 hover:underline underline-offset-4"
       >
         <Link to='/products'>PRODUCTS</Link>
       </Typography>
@@ -42,7 +42,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal text-black hover:text-blue-600 hover:font-bold"
+        className="font-normal text-sky-600 font-bold hover:text-amber-500 hover:underline underline-offset-4"
       >
         <Link to='/gallery'>GALLERY</Link>
       </Typography>
@@ -50,7 +50,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="font-normal text-black hover:text-blue-600 hover:font-bold"
+        className="font-normal text-sky-600 font-bold hover:text-amber-500 hover:underline underline-offset-4"
       >
         <Link to='/contact'>CONTACT</Link>
       </Typography>

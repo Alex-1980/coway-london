@@ -3,15 +3,15 @@ import { Carousel } from 'flowbite-react';
 
 export default function Home() {
   return (
-    <div className="relative mx-auto max-auto px-16 py-6">
-      <div className='grid grid-cols-2 gap-4'>
+    <div className="relative max-auto px-16 py-6">
+      <div className='grid grid-cols-2 justify-items-center gap-4'>
         <div className='grid grid-cols-2 gap-4'>
           <img src="/images/home/water-filtration.png" alt="water-filtration" />
           <img src="/images/home/air-purifiers.png" alt="water-filtration" />
           <img src="/images/home/water-softener.png" alt="water-filtration" />
           <img src="/images/home/electronic-bidet.png" alt="water-filtration" />
         </div>
-        <div className='grid'>
+        <div className='grid max-w-lg'>
           <div className='pl-10'>
             <Carousel
               slideInterval={2000}

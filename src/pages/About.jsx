@@ -12,6 +12,15 @@ export default function About() {
       <div className='max-auto text-center pb-3'>
         <img src="/images/about/under-service-list.png" alt="coway-info" />
       </div>
+      <div className='max-auto text-center pb-3'>
+        <img src="/images/about/coway-profile.png" alt="coway-info" />
+      </div>
+      <div className='max-auto text-center pb-3'>
+        <img src="/images/about/establish.png" alt="coway-info" />
+      </div>
+      <div className='max-auto text-center pb-3'>
+        <img src="/images/about/under-establish.png" alt="coway-info" />
+      </div>
     </div>
   );
 }
